@@ -1,0 +1,149 @@
+
+.home-section {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 44rem;
+  background: url("/assets/images/pizza/background_home.jpg")center/cover no-repeat;
+
+}
+.search {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.main{
+  display: inline-block;
+  width: 500px;
+  margin-right: 0;
+  margin-top: 13rem;
+}
+.main_image{
+  display: inline-block;
+  width: 600px;
+  margin: 0;
+
+}
+.men_text h1{
+  color: white;
+  font-family: mv boli, serif;
+
+}
+.men_text h1 span{
+  margin-left: 15px;
+  color: #fac031;
+  font-family: mv boli, serif;
+  line-height: 20px;
+  font-size: 70px;
+}
+
+.info_text p{
+  width: 27rem;
+  text-align: justify;
+  line-height: 35px;
+  color: white;
+  margin: 20px;
+  font-family: "Times New Roman", serif;
+}
+.mainImg {
+  width: 70%;
+  height: auto;
+  position: relative;
+  left: 9rem;
+  top: 7.5rem;
+}
+.container {
+  margin-top: 0;
+  margin-bottom: 0;
+  background: url("/assets/images/pizza/background_menu.jpg") center/cover no-repeat;
+}
+
+.menu-info{
+  text-align: center;
+  color: #0e1013;
+}
+.info-title{
+  margin-top: .5rem;
+  font-family: "Roboto Light", sans-serif;
+  margin-bottom: .5rem;
+  font-size: 18px;
+}
+.menu-title{
+  margin-top: 0;
+  font-family: "Times New Roman", serif;
+  font-weight: bolder;
+  font-size: 50px;
+  color:darkgoldenrod;
+  margin-bottom: 2rem;
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1.5rem;
+
+}
+ul li a{
+  height: 23.5rem;
+  width: 15rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color:hsl(0, 0%, 10%);;
+  backdrop-filter: blur(20px);
+  border-radius: 1rem;
+  transition: all ease 0.3s;
+}
+
+
+li a:hover{
+  opacity: 0.9;
+  cursor: pointer;
+  box-shadow: 0 0 50px 1px #ffbb763f;
+  border: 1px solid rgba(255, 255, 255, 0.454);
+}
+.content{
+  padding: .5rem 1rem;
+  position: relative;
+
+}
+.name{
+  font-weight: bold;
+  font-family: "Times New Roman", serif;
+  color: darkgoldenrod;
+}
+.favorite{
+  position:absolute;
+  right: 1rem;
+  top: 0.5rem;
+  font-size: 1.2rem;
+  color: red;
+}
+.favorite.not{
+  color: grey;
+}
+.stars{
+  margin-bottom: .5rem;
+}
+.ingredient{
+  font-size: .7rem;
+  color: grey;
+  margin-bottom: .2rem;
+
+}
+.price{
+  font-weight: 900;
+  font-size: 16px;
+  margin-top: .5rem;
+  color: darkgoldenrod;
+}

@@ -1,0 +1,10 @@
+<div *ngIf="pizzaTags" [style.justifyContent]="justifyContent">
+  <a *ngFor="let piTag of pizzaTags" routerLink="/tag/{{piTag.name}}">
+    {{piTag.name}} ({{piTag.count}})
+  </a>
+</div>
+<div *ngIf="pizzaPageTags" [style.justifyContent]="justifyContent">
+  <a *ngFor="let tagName of pizzaPageTags" routerLink="/tag/{{tagName}}">
+    {{tagName}}
+  </a>
+</div>

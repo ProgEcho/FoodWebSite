@@ -1,0 +1,153 @@
+.body{
+  background: url("/assets/images/pizza/blob-scene-haikei.png") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 0;
+  height: 100vh;
+}
+.cart-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin:1.5rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  flex: 3 0;
+  justify-content: space-evenly;
+  border: 1px solid #fa4831;
+  border-radius: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: .5rem;
+  color: #e72929;
+
+  overflow: hidden;
+  background-color:hsl(0, 0%, 10%);
+  backdrop-filter: blur(20px);
+  transition: all ease 0.3s;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  border-bottom: 1px solid grey;
+}
+ul li:last-child{
+  border:none;
+}
+
+ul li img {
+  max-width: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+
+}
+ul li a {
+  text-decoration: none;
+  color:darkgoldenrod;
+  font-weight: bold;
+}
+ul li div {
+  padding: 1rem;
+}
+ul li div:not(:first-child){
+  flex-basis: 18%;
+}
+ul li input[type="number"] {
+  padding: 8px;
+  border-radius: 4px;
+  width: 50px;
+  background-color: hsl(0, 0%, 10%);
+  color: white;
+}
+ul .button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  gap: 2px;
+}
+
+ul .button .svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+ul .button .svgIcon path {
+  fill: white;
+}
+
+ul .button:hover {
+  transition-duration: 0.3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+  gap: 0;
+}
+
+ul .button .bin-top {
+  transform-origin: bottom right;
+}
+ul .button:hover .bin-top {
+  transition-duration: 0.5s;
+  transform: rotate(160deg);
+}
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+  height: 20rem;
+  flex: 1 3;
+  margin: .5rem;
+  border: 1px solid #fa4831;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color:hsl(0, 0%, 10%);;
+  backdrop-filter: blur(20px);
+  transition: all ease 0.3s;
+  color: darkgreen;
+
+}
+.checkout>div{
+  font-size: 1.4rem;
+  margin: 1rem;
+  flex:3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+.checkout .pizza-count .total-price {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.checkout .pizza-count::before{
+  content: 'Cont: ';
+  color: grey;
+}
+.checkout .total-price::before{
+  content: 'Price: ';
+  color: grey;
+}

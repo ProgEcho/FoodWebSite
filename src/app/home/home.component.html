@@ -1,0 +1,63 @@
+<div class="home-section">
+  <div class="main">
+      <div class="men_text">
+        <h1>Get Fresh<span>Pizza</span><br>in a Easy Way</h1>
+      </div>
+      <div class="info_text">
+        <p>
+          PizzaGo in [City] offers quick, delicious pizza with classic and unique flavors,
+          promising a delightful experience centered on simple, scrumptious, and satisfying pizza
+        </p>
+      </div>
+    </div>
+  <div class="main_image">
+      <img class="mainImg" src="assets/images/pizza/main_img.png">
+    </div>
+</div>
+
+<div class="container">
+  <div class="search">
+    <app-search></app-search>
+  </div>
+  <div class="menu-info">
+    <p class="info-title">Find your delicious Pizza</p>
+    <h3 class="menu-title">Pizza Menu</h3>
+  </div>
+  <app-pizza-tags></app-pizza-tags>
+  <app-no-found [visible]="!pizza || pizza.length<=0" restLinkText="Search a gain "></app-no-found>
+  <ul>
+    <li *ngFor="let pi of pizza" >
+      <a routerLink="/pizza/{{pi.id}}">
+        <img class="pizza-list-image" src="{{pi.imageUrl}}" alt="">
+        <div class="content">
+          <div class="name">
+            {{pi.name}}
+          </div>
+          <span class="favorite {{pi.favorite?'':'not'}}">
+          ❤
+        </span>
+          <div class="stars">
+            <star-rating [value]="pi.stars" [totalstars]="5"
+                         checkedcolor="red" uncheckedcolor="black"
+                         size="24px" [readonly]="true">
+            </star-rating>
+          </div>
+          <div class="ingredient">
+          <span>
+            {{pi.ingredient}}
+          </span>
+          </div>
+          <div class="price">
+          <span>
+            {{ pi.price | currency:'EUR'}}
+          </span>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<app-footer></app-footer>
+
+
